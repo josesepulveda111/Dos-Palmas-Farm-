@@ -1,0 +1,58 @@
+---
+import FeaturedProducts from "@/components/FeaturedProducts.astro";
+import config from "@/config/config.json";
+import CollectionsSlider from "@/functional-components/CollectionsSlider";
+import Base from "@/layouts/Base.astro";
+// import { getCollectionProducts, getCollections } from "@/lib/shopify";
+import { getLocalProducts } from "@/lib/local/products";
+import { getLocalCollections } from "@/lib/local/collections";
+import CallToAction from "@/partials/CallToAction.astro";
+import HeroSlider from "src/layouts/functional-components/HeroSlider";
+
+const { collections } = config.shopify;
+
+// Fetch local products once
+const { products: allProducts } = await getLocalProducts({});
+
+// Hero slider products (take first 5)
+const heroProducts = allProducts.slice(0, 5);
+
+// Local collections
+const collectionProducts = await getLocalCollections();
+
+// Featured products (take first 8)
+const featuredProducts = allProducts.slice(0, 8);
+---
+
+<Base>
+  <section>
+    <div class="container">
+      <div class="bg-gradient py-10 rounded-md">
+        <HeroSlider products={heroProducts} client:load />
+      </div>
+    </div>
+  </section>
+
+  {/* category section */}
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-6 md:mb-14">
+        <h2>Collections</h2>
+      </div>
+      <CollectionsSlider client:load collections={collectionProducts} />
+    </div>
+  </section>
+
+  {/* Featured Products section */}
+  <section>
+    <div class="container">
+      <div class="text-center mb-6 md:mb-14">
+        <h2 class="mb-2">Featured Products</h2>
+        <p class="md:h5">Explore Today's Featured Picks!</p>
+      </div>
+      <FeaturedProducts products={featuredProducts} />
+    </div>
+  </section>
+
+  <CallToAction />
+</Base>

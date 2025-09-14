@@ -1,0 +1,298 @@
+---
+import Layout from "@/layouts/Base.astro";
+import { cart, refreshCartState, totalQuantity } from "@/cartStore";
+import Notification from "@/layouts/functional-components/Notification";
+---
+
+<Layout title="Finalizar Compra">
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-8 text-center">Finalizar Compra</h1>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Formulario del Cliente -->
+        <div class="bg-white dark:bg-darkmode-body p-6 rounded-lg shadow-md">
+          <h2 class="text-xl font-semibold mb-4">Información del Cliente</h2>
+          <form id="checkoutForm" class="space-y-4">
+            <div>
+              <label for="name" class="block text-sm font-medium mb-2">Nombre Completo *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-darkmode-body dark:text-white"
+                placeholder="Tu nombre completo"
+              >
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium mb-2">Email *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-darkmode-body dark:text-white"
+                placeholder="tu@email.com"
+              >
+            </div>
+            
+            <div>
+              <label for="phone" class="block text-sm font-medium mb-2">Teléfono</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-darkmode-body dark:text-white"
+                placeholder="+1 (555) 123-4567"
+              >
+            </div>
+            
+            <div>
+              <label for="address" class="block text-sm font-medium mb-2">Dirección de Entrega</label>
+              <textarea 
+                id="address" 
+                name="address" 
+                rows="3"
+                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-darkmode-body dark:text-white"
+                placeholder="Dirección completa para la entrega"
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit" 
+              id="submitBtn"
+              class="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-primary/90 transition-colors font-medium"
+            >
+              <span id="submitText">Enviar Pedido</span>
+              <span id="loadingText" class="hidden">Enviando...</span>
+            </button>
+          </form>
+        </div>
+        
+        <!-- Resumen del Carrito -->
+        <div class="bg-white dark:bg-darkmode-body p-6 rounded-lg shadow-md">
+          <h2 class="text-xl font-semibold mb-4">Resumen del Pedido</h2>
+          <div id="cartSummary">
+            <!-- Se llenará dinámicamente -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Componente de notificación -->
+  <div id="notification-container" class="fixed top-4 right-4 z-50 max-w-sm w-full mx-auto"></div>
+</Layout>
+
+<script>
+  import { cart, refreshCartState } from "@/cartStore";
+  import { sendOrderEmail } from "@/lib/emailService";
+  
+  // Función para formatear precio
+  function formatPrice(amount: string, currencyCode: string) {
+    return `$${parseFloat(amount).toFixed(2)} ${currencyCode}`;
+  }
+  
+  // Función para mostrar notificaciones elegantes
+  function showNotification(type: 'success' | 'error' | 'info' | 'warning', message: string) {
+    const container = document.getElementById('notification-container');
+    if (!container) return;
+    
+    // Limpiar notificaciones anteriores
+    container.innerHTML = '';
+    
+    const getIcon = () => {
+      switch (type) {
+        case 'success':
+          return `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+          </svg>`;
+        case 'error':
+          return `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>`;
+        case 'warning':
+          return `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+          </svg>`;
+        case 'info':
+          return `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>`;
+        default:
+          return '';
+      }
+    };
+
+    const getStyles = () => {
+      switch (type) {
+        case 'success':
+          return 'bg-green-50 border-green-200 text-green-800 dark:bg-green-900/20 dark:border-green-800 dark:text-green-200';
+        case 'error':
+          return 'bg-red-50 border-red-200 text-red-800 dark:bg-red-900/20 dark:border-red-800 dark:text-red-200';
+        case 'warning':
+          return 'bg-yellow-50 border-yellow-200 text-yellow-800 dark:bg-yellow-900/20 dark:border-yellow-800 dark:text-yellow-200';
+        case 'info':
+          return 'bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-900/20 dark:border-blue-800 dark:text-blue-200';
+        default:
+          return 'bg-gray-50 border-gray-200 text-gray-800 dark:bg-gray-900/20 dark:border-gray-800 dark:text-gray-200';
+      }
+    };
+    
+    const notification = document.createElement('div');
+    notification.className = `
+      ${getStyles()}
+      border rounded-lg shadow-lg p-4 flex items-start space-x-3
+      transform transition-all duration-300 ease-in-out
+      translate-x-0 opacity-100
+    `;
+    
+    notification.innerHTML = `
+      <div class="flex-shrink-0">
+        ${getIcon()}
+      </div>
+      <div class="flex-1 min-w-0">
+        <p class="text-sm font-medium">${message}</p>
+      </div>
+      <button class="flex-shrink-0 ml-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors" onclick="this.parentElement.remove()">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    `;
+    
+    container.appendChild(notification);
+    
+    // Auto-remove después de 5 segundos
+    setTimeout(() => {
+      if (notification.parentElement) {
+        notification.style.transform = 'translateX(100%)';
+        notification.style.opacity = '0';
+        setTimeout(() => {
+          notification.remove();
+        }, 300);
+      }
+    }, 5000);
+  }
+  
+  // Función para renderizar el resumen del carrito
+  function renderCartSummary(cartData: any) {
+    const summaryDiv = document.getElementById('cartSummary');
+    if (!summaryDiv || !cartData || !cartData.lines || cartData.lines.length === 0) {
+      summaryDiv!.innerHTML = '<p class="text-gray-500">Carrito vacío</p>';
+      return;
+    }
+    
+    const itemsHTML = cartData.lines.map((item: any) => `
+      <div class="flex items-center space-x-3 py-3 border-b border-gray-200 dark:border-gray-600">
+        <img 
+          src="${item.merchandise.product.featuredImage?.url || '/images/product_image404.jpg'}" 
+          alt="${item.merchandise.product.title}"
+          class="w-16 h-16 object-cover rounded-md"
+        >
+        <div class="flex-1">
+          <h3 class="font-medium">${item.merchandise.product.title}</h3>
+          <p class="text-sm text-gray-500">${item.merchandise.title}</p>
+          <p class="text-sm">Cantidad: ${item.quantity}</p>
+        </div>
+        <div class="text-right">
+          <p class="font-medium">${formatPrice(item.cost.totalAmount.amount, item.cost.totalAmount.currencyCode)}</p>
+        </div>
+      </div>
+    `).join('');
+    
+    summaryDiv.innerHTML = `
+      ${itemsHTML}
+      <div class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-600">
+        <div class="flex justify-between mb-2">
+          <span>Subtotal:</span>
+          <span>${formatPrice(cartData.cost.subtotalAmount.amount, cartData.cost.subtotalAmount.currencyCode)}</span>
+        </div>
+        <div class="flex justify-between mb-2">
+          <span>Impuestos:</span>
+          <span>${formatPrice(cartData.cost.totalTaxAmount.amount, cartData.cost.totalTaxAmount.currencyCode)}</span>
+        </div>
+        <div class="flex justify-between text-lg font-bold">
+          <span>Total:</span>
+          <span>${formatPrice(cartData.cost.totalAmount.amount, cartData.cost.totalAmount.currencyCode)}</span>
+        </div>
+      </div>
+    `;
+  }
+  
+  // Cargar el carrito al inicializar la página
+  async function initializeCheckout() {
+    try {
+      await refreshCartState();
+      const currentCart = cart.get();
+      renderCartSummary(currentCart);
+      
+      // Si el carrito está vacío, redirigir a productos
+      if (!currentCart || !currentCart.lines || currentCart.lines.length === 0) {
+        window.location.href = '/products';
+        return;
+      }
+    } catch (error) {
+      console.error('Error al cargar el carrito:', error);
+    }
+  }
+  
+  // Manejar el envío del formulario
+  document.getElementById('checkoutForm')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = document.getElementById('submitBtn') as HTMLButtonElement;
+    const submitText = document.getElementById('submitText') as HTMLSpanElement;
+    const loadingText = document.getElementById('loadingText') as HTMLSpanElement;
+    
+    // Mostrar estado de carga
+    submitBtn.disabled = true;
+    submitText.classList.add('hidden');
+    loadingText.classList.remove('hidden');
+    
+    try {
+      const formData = new FormData(e.target as HTMLFormElement);
+      const customerInfo = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        address: formData.get('address')
+      };
+      
+      const currentCart = cart.get();
+      
+      // Enviar email directamente usando el servicio
+      const result = await sendOrderEmail(currentCart, customerInfo);
+      
+      if (result.success) {
+        showNotification('success', '¡Pedido enviado correctamente! Te hemos enviado un email de confirmación.');
+        
+        // Limpiar el carrito después del envío exitoso
+        if (currentCart) {
+          localStorage.removeItem('local-cart:' + currentCart.id);
+          document.cookie = 'cartId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        }
+        
+        // Redirigir a página de confirmación después de un breve delay
+        setTimeout(() => {
+          window.location.href = '/checkout/success';
+        }, 2000);
+      } else {
+        showNotification('error', 'Error al enviar el pedido: ' + result.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      showNotification('error', 'Error al enviar el pedido. Por favor, inténtalo de nuevo.');
+    } finally {
+      // Restaurar estado del botón
+      submitBtn.disabled = false;
+      submitText.classList.remove('hidden');
+      loadingText.classList.add('hidden');
+    }
+  });
+  
+  // Inicializar cuando se carga la página
+  document.addEventListener('DOMContentLoaded', initializeCheckout);
+</script>

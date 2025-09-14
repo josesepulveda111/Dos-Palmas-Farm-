@@ -1,0 +1,48 @@
+{
+  "site": {
+    "title": "Dos Palmas Farm",
+    "base_url": "https://dospalmasfarm.com/",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo_circulo_80.png",
+    "logo_darkmode": "/images/logo.png",
+    "logo_width": "80",
+    "logo_height": "60",
+    "logo_text": "Dos Palmas Farm"
+  },
+
+  "settings": {
+    "search": true,
+    "account": true,
+    "sticky_header": true,
+    "theme_switcher": true,
+    "default_theme": "system"
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "copyright": "Designed And Developed by [Themefisher](https://themefisher.com/)"
+  },
+
+  "navigation_button": {
+    "enable": true,
+    "label": "Get Started",
+    "link": "https://github.com/themefisher/shopplate"
+  },
+
+  "metadata": {
+    "meta_author": "Dos Palmas Farm",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Flores frescas y hermosas de Dos Palmas Farm"
+  },
+
+  "shopify": {
+    "currencySymbol": "$",
+    "currencyCode": "USD",
+    "collections": {
+      "hero_slider": "BlindsStart",
+      "featured_products": "featured-products"
+    }
+  }
+}
