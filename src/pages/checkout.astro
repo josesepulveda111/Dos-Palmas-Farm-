@@ -88,7 +88,6 @@ import Notification from "@/layouts/functional-components/Notification";
 
 <script>
   import { cart, refreshCartState } from "@/cartStore";
-  import { sendOrderEmail } from "@/lib/emailService";
   
   // Función para formatear precio
   function formatPrice(amount: string, currencyCode: string) {
@@ -263,8 +262,19 @@ import Notification from "@/layouts/functional-components/Notification";
       
       const currentCart = cart.get();
       
-      // Enviar email directamente usando el servicio
-      const result = await sendOrderEmail(currentCart, customerInfo);
+      // Enviar email usando el endpoint API
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          cart: currentCart,
+          customerInfo
+        })
+      });
+      
+      const result = await response.json();
       
       if (result.success) {
         showNotification('success', '¡Pedido enviado correctamente! Te hemos enviado un email de confirmación.');

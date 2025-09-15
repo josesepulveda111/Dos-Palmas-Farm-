@@ -1,21 +1,107 @@
+import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
 
-// Configuración del transporter
-const createTransporter = () => {
-  return nodemailer.createTransporter({
-    service: 'gmail',
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'notificaciones.generales00@gmail.com',
-      pass: 'koem xien tpxt ajeq'
+export const POST: APIRoute = async ({ request }) => {
+  try {
+    const { cart, customerInfo } = await request.json();
+    
+    // Validar datos
+    if (!cart || !cart.lines || cart.lines.length === 0) {
+      return new Response(JSON.stringify({ 
+        success: false, 
+        message: 'Carrito vacío' 
+      }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' }
+      });
     }
-  });
+
+    if (!customerInfo || !customerInfo.email || !customerInfo.name) {
+      return new Response(JSON.stringify({ 
+        success: false, 
+        message: 'Información del cliente incompleta' 
+      }), {
+        status: 400,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    // Configurar transporter
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
+      auth: {
+        user: 'notificaciones.generales00@gmail.com',
+        pass: 'koem xien tpxt ajeq'
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
+
+    // Verificar conexión
+    await transporter.verify();
+
+    // Generar HTML del email
+    const emailHTML = generateOrderEmailHTML(cart, customerInfo);
+
+    // Configurar el email
+    const mailOptions = {
+      from: {
+        name: 'Dos Palmas Farm',
+        address: 'notificaciones.generales00@gmail.com'
+      },
+      to: customerInfo.email,
+      subject: `🌹 Confirmación de Pedido - ${customerInfo.name}`,
+      html: emailHTML
+    };
+
+    // Enviar email
+    const info = await transporter.sendMail(mailOptions);
+    
+    console.log('Email enviado exitosamente:', info.messageId);
+    
+    return new Response(JSON.stringify({ 
+      success: true, 
+      message: 'Email enviado correctamente',
+      messageId: info.messageId
+    }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+  } catch (error) {
+    console.error('Error al enviar email:', error);
+    
+    let errorMessage = 'Error al enviar el email';
+    
+    if (error instanceof Error) {
+      if (error.message.includes('Invalid login') || error.message.includes('authentication')) {
+        errorMessage = 'Error de autenticación. Verifica las credenciales del email.';
+      } else if (error.message.includes('ECONNREFUSED')) {
+        errorMessage = 'Error de conexión. Verifica tu conexión a internet.';
+      } else if (error.message.includes('timeout')) {
+        errorMessage = 'Tiempo de espera agotado. Inténtalo de nuevo.';
+      } else if (error.message.includes('ENOTFOUND')) {
+        errorMessage = 'Error de DNS. Verifica tu conexión a internet.';
+      } else {
+        errorMessage = `Error: ${error.message}`;
+      }
+    }
+    
+    return new Response(JSON.stringify({ 
+      success: false, 
+      message: errorMessage 
+    }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
 };
 
-// Función para generar el HTML del email
-export const generateOrderEmailHTML = (cart: any, customerInfo: any): string => {
+function generateOrderEmailHTML(cart: any, customerInfo: any): string {
   const itemsHTML = cart.lines.map((item: any) => `
     <tr>
       <td style="padding: 10px; border-bottom: 1px solid #eee;">
@@ -163,70 +249,5 @@ export const generateOrderEmailHTML = (cart: any, customerInfo: any): string => 
     </body>
     </html>
   `;
-};
+}
 
-// Función principal para enviar email
-export const sendOrderEmail = async (cart: any, customerInfo: any): Promise<{ success: boolean; message: string }> => {
-  try {
-    // Validar datos
-    if (!cart || !cart.lines || cart.lines.length === 0) {
-      return { success: false, message: 'Carrito vacío' };
-    }
-
-    if (!customerInfo || !customerInfo.email || !customerInfo.name) {
-      return { success: false, message: 'Información del cliente incompleta' };
-    }
-
-    // Crear transporter
-    const transporter = createTransporter();
-
-    // Verificar conexión
-    await transporter.verify();
-
-    // Generar HTML del email
-    const emailHTML = generateOrderEmailHTML(cart, customerInfo);
-
-    // Configurar el email
-    const mailOptions = {
-      from: {
-        name: 'Dos Palmas Farm',
-        address: 'notificaciones.generales00@gmail.com'
-      },
-      to: customerInfo.email,
-      subject: `🌹 Confirmación de Pedido - ${customerInfo.name}`,
-      html: emailHTML
-    };
-
-    // Enviar email
-    const info = await transporter.sendMail(mailOptions);
-    
-    console.log('Email enviado:', info.messageId);
-    
-    return { 
-      success: true, 
-      message: 'Email enviado correctamente' 
-    };
-
-  } catch (error) {
-    console.error('Error al enviar email:', error);
-    
-    let errorMessage = 'Error al enviar el email';
-    
-    if (error instanceof Error) {
-      if (error.message.includes('Invalid login')) {
-        errorMessage = 'Error de autenticación. Verifica las credenciales del email.';
-      } else if (error.message.includes('ECONNREFUSED')) {
-        errorMessage = 'Error de conexión. Verifica tu conexión a internet.';
-      } else if (error.message.includes('timeout')) {
-        errorMessage = 'Tiempo de espera agotado. Inténtalo de nuevo.';
-      } else {
-        errorMessage = `Error: ${error.message}`;
-      }
-    }
-    
-    return { 
-      success: false, 
-      message: errorMessage 
-    };
-  }
-};
