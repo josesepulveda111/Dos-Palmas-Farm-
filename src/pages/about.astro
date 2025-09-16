@@ -44,13 +44,34 @@ const {
           <div class={`lg:flex gap-8 mt-14 lg:mt-28`}>
             {index % 2 === 0 ? (
               <>
-                <ImageMod
-                  class="rounded-md mx-auto"
-                  src={section?.image!}
-                  width={536}
-                  height={449}
-                  alt={section?.title}
-                />
+                {section?.video ? (
+                  section?.poster ? (
+                    <video
+                      class="rounded-md mx-auto w-full h-[449px]"
+                      src={section?.video}
+                      poster={section.poster}
+                      width={536}
+                      height={449}
+                      controls
+                    />
+                  ) : (
+                    <video
+                      class="rounded-md mx-auto w-full h-[449px]"
+                      src={section?.video}
+                      width={536}
+                      height={449}
+                      controls
+                    />
+                  )
+                ) : (
+                  <ImageMod
+                    class="rounded-md mx-auto"
+                    src={section?.image!}
+                    width={536}
+                    height={449}
+                    alt={section?.title}
+                  />
+                )}
                 <div class="mt-10 lg:mt-0">
                   <h2>{section?.title}</h2>
                   <p
@@ -68,13 +89,34 @@ const {
                     set:html={markdownify(section.content)}
                   />
                 </div>
-                <ImageMod
-                  class="rounded-md mx-auto mt-10 lg:mt-0"
-                  src={section.image}
-                  width={536}
-                  height={449}
-                  alt={section.title}
-                />
+                {section.video ? (
+                  section?.poster ? (
+                    <video
+                      class="rounded-md mx-auto mt-10 lg:mt-0 w-full h-[449px]"
+                      src={section.video}
+                      width={536}
+                      height={449}
+                      poster={section.poster}
+                      controls
+                    />
+                  ) : (
+                    <video
+                      class="rounded-md mx-auto mt-10 lg:mt-0 w-full h-[449px]"
+                      src={section.video}
+                      width={536}
+                      height={449}
+                      controls
+                    />
+                  )
+                ) : (
+                  <ImageMod
+                    class="rounded-md mx-auto mt-10 lg:mt-0"
+                    src={section.image!}
+                    width={536}
+                    height={449}
+                    alt={section.title}
+                  />
+                )}
               </>
             )}
           </div>
@@ -93,42 +135,45 @@ const {
     )
   }
 
-  <section>
-    <div class="container">
-      <div class="text-center">
-        <h2>Our Staff</h2>
+  {
+    staff_section_enable && (
+      <section>
+        <div class="container">
+          <div class="text-center">
+            <h2>Our Staff</h2>
 
-        <div
-          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-14"
-        >
-          {
-            staff_section_enable &&
-              staff!.map(
-                (s: { name: string; designation: string; avatar: string }) => (
-                  <div class="border border-border rounded-lg">
-                    <div class="py-6 space-y-2">
-                      <h3 class="h4">{s.name}</h3>
-                      <p class="text-text-dark dark:text-darkmode-text-light">
-                        {s.designation}
-                      </p>
+            <div
+              class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-14"
+            >
+              {
+                staff!.map(
+                  (s: { name: string; designation: string; avatar: string }) => (
+                    <div class="border border-border rounded-lg">
+                      <div class="py-6 space-y-2">
+                        <h3 class="h4">{s.name}</h3>
+                        <p class="text-text-dark dark:text-darkmode-text-light">
+                          {s.designation}
+                        </p>
+                      </div>
+                      <div class="bg-light rounded-b-xl mx-auto">
+                        <ImageMod
+                          src={s.avatar}
+                          alt={`Staff-${s.name}`}
+                          width={290}
+                          height={250}
+                          class="mx-auto w-full h-[250px] rounded-b-xl overflow-hidden"
+                        />
+                      </div>
                     </div>
-                    <div class="bg-light rounded-b-xl mx-auto">
-                      <ImageMod
-                        src={s.avatar}
-                        alt={`Staff-${s.name}`}
-                        width={290}
-                        height={250}
-                        class="mx-auto w-full h-[250px] rounded-b-xl overflow-hidden"
-                      />
-                    </div>
-                  </div>
+                  )
                 )
-              )
-          }
+              }
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    )
+  }
 
   <section class="section">
     <div class="container">

@@ -7,13 +7,13 @@ draft: false
 #Contact Options
 contact_meta:
   - name: "Address"
-    contact: "123 Main Street, Anytown, </br> CA 12335 - USA"
+    contact: "Carrera 48 # 42 - 12 </br> Rionegro </br> Antioquia - Colombia"
 
   - name: "Email"
-    contact: "yourmail@domain.com </br> support@domain.com"
+    contact: "dospalmasfarm@outlook.com </br> info@dospalmasfarms.com.co"
 
   - name: "Phone"
-    contact: "Mobile: (08) 123 456 789 </br> Hotline: 1009 678 456"
+    contact: "CO: 57 (312)825-7055 </br> USA: 1(305)999-7418"
 
   - name: "Shop Time"
     contact: "Available at 10am-8pm </br>"

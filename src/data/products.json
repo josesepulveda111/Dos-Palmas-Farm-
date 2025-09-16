@@ -7,15 +7,15 @@
     "description": "Hermosas rosas frescas, perfectas para expresar amor y pasión. Cultivadas con cuidado en nuestra granja.",
     "descriptionHtml": "<p>Hermosas rosas frescas, perfectas para expresar amor y pasión. Cultivadas con cuidado en nuestra granja.</p>",
     "options": [
-      { "id": "opt-cantidad", "name": "Cantidad", "values": ["6 unidades", "12 unidades", "24 unidades"] },
-      { "id": "opt-presentacion", "name": "Presentación", "values": ["Suelta", "Bouquet"] }
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 30"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "45.00", "currencyCode": "USD" },
-      "minVariantPrice": { "amount": "15.00", "currencyCode": "USD" }
+      "maxVariantPrice": { "amount": "15.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "0.95", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
-      "maxVariantPrice": { "amount": "55.00", "currencyCode": "USD" }
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
     },
     "variants": {
       "edges": [
@@ -28,7 +28,7 @@
               { "name": "Cantidad", "value": "6 unidades" },
               { "name": "Presentación", "value": "Suelta" }
             ],
-            "price": { "amount": "15.00", "currencyCode": "USD" }
+            "price": { "amount": "0.95", "currencyCode": "USD" }
           }
         },
         {
@@ -46,8 +46,8 @@
       ]
     },
     "featuredImage": {
-      "url": "/images/products/rosas-rojas/1.jpg",
-      "altText": "Rosas Rojas",
+      "url": "/images/products/HYD-TINTURADA-SUPER.jpg",
+      "altText": "HYD-TINTURADA-SUPER",
       "width": 1200,
       "height": 1200
     },
@@ -55,27 +55,27 @@
       "edges": [
         {
           "node": {
-            "url": "/images/products/rosas-rojas/1.jpg",
-            "altText": "Rosas Rojas",
+            "url": "/images/products/HYD-TINTURADA-SUPER.jpg",
+            "altText": "HYD-TINTURADA-SUPER",
             "width": 1200,
             "height": 1200
           }
         },
         {
           "node": {
-            "url": "/images/products/rosas-rojas/1.jpg",
-            "altText": "Rosas Rojas",
+            "url": "/images/products/HYD-TINTURADA-SUPER.jpg",
+            "altText": "HYD-TINTURADA-SUPER",
             "width": 1200,
             "height": 1200
           }
         }
       ]
     },
-    "seo": { "title": "Rosas Rojas - Dos Palmas Farm", "description": "Rosas rojas frescas para ocasiones especiales" },
-    "tags": ["rosas", "rojas", "romanticas"],
+    "seo": { "title": "HYD TINTURADA SUPER - Dos Palmas Farm", "description": "Rosas rojas frescas para ocasiones especiales" },
+    "tags": ["hortensias", "tinturadas", "super"],
     "updatedAt": "2025-01-01T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Rosas" } ] }
+    "collections": { "nodes": [ { "title": "Hortensias" } ] }
   },
   {
     "id": "flor-2",
@@ -85,12 +85,12 @@
     "description": "Rosas brillantes y alegres que traen la energía del sol a tu hogar. Perfectos para decorar cualquier espacio.",
     "descriptionHtml": "<p>Rosas brillantes y alegres que traen la energía del sol a tu hogar. Perfectos para decorar cualquier espacio.</p>",
     "options": [
-      { "id": "opt-cantidad", "name": "Cantidad", "values": ["3 unidades", "5 unidades", "10 unidades"] },
-      { "id": "opt-tamaño", "name": "Tamaño", "values": ["Pequeño", "Mediano", "Grande"] }
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 20"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
       "maxVariantPrice": { "amount": "35.00", "currencyCode": "USD" },
-      "minVariantPrice": { "amount": "12.00", "currencyCode": "USD" }
+      "minVariantPrice": { "amount": "1.06", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
       "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
@@ -124,8 +124,8 @@
       ]
     },
     "featuredImage": {
-      "url": "/images/products/girasoles/1.jpg",
-      "altText": "Girasoles",
+      "url": "/images/products/ANTIQUE-GREEN.png",
+      "altText": "ANTIQUE-GREEN",
       "width": 1200,
       "height": 1200
     },
@@ -133,51 +133,51 @@
       "edges": [
         {
           "node": {
-            "url": "/images/products/girasoles/1.jpg",
-            "altText": "Girasoles",
+            "url": "/images/products/ANTIQUE-GREEN.png",
+            "altText": "ANTIQUE-GREEN",
             "width": 1200,
             "height": 1200
           }
         },        {
           "node": {
-            "url": "/images/products/girasoles/1.jpg",
-            "altText": "Girasoles",
+            "url": "/images/products/ANTIQUE-GREEN.png",
+            "altText": "ANTIQUE-GREEN",
             "width": 1200,
             "height": 1200
           }
         },        {
           "node": {
-            "url": "/images/products/girasoles/1.jpg",
-            "altText": "Girasoles",
+            "url": "/images/products/ANTIQUE-GREEN.png",
+            "altText": "ANTIQUE-GREEN",
             "width": 1200,
             "height": 1200
           }
         }
       ]
     },
-    "seo": { "title": "Girasoles - Dos Palmas Farm", "description": "Girasoles frescos y alegres" },
-    "tags": ["girasoles", "amarillos", "alegres"],
+    "seo": { "title": "ANTIQUE GREEN - Dos Palmas Farm", "description": "Girasoles frescos y alegres" },
+    "tags": ["hortensias", "verdes", "antiguos"],
     "updatedAt": "2025-01-02T00:00:00Z",
     "vendor": "Dos Palmas Farm",
     "collections": { "nodes": [ { "title": "Flores de Campo" } ] }
   },
   {
     "id": "flor-3",
-    "handle": "lirios-blancos",
+    "handle": "HYDRANGEA SELECTA AZUL",
     "availableForSale": true,
-    "title": "Lirios Blancos",
-    "description": "Elegantes lirios blancos que simbolizan pureza y elegancia. Perfectos para bodas y ocasiones especiales.",
-    "descriptionHtml": "<p>Elegantes lirios blancos que simbolizan pureza y elegancia. Perfectos para bodas y ocasiones especiales.</p>",
+    "title": "HYDRANGEA SELECTA AZUL",
+    "description": "Elegantes hortensas que simbolizan pureza y elegancia. Perfectos para bodas y ocasiones especiales.",
+    "descriptionHtml": "<p>Elegantes hortensas que simbolizan pureza y elegancia. Perfectos para bodas y ocasiones especiales.</p>",
     "options": [
-      { "id": "opt-cantidad", "name": "Cantidad", "values": ["4 unidades", "8 unidades", "12 unidades"] },
-      { "id": "opt-arreglo", "name": "Arreglo", "values": ["Suelto", "Bouquet elegante"] }
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
       "maxVariantPrice": { "amount": "65.00", "currencyCode": "USD" },
-      "minVariantPrice": { "amount": "22.00", "currencyCode": "USD" }
+      "minVariantPrice": { "amount": "0.45", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
-      "maxVariantPrice": { "amount": "75.00", "currencyCode": "USD" }
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
     },
     "variants": {
       "edges": [
@@ -208,8 +208,8 @@
       ]
     },
     "featuredImage": {
-      "url": "/images/products/lirios-blancos/1.jpg",
-      "altText": "Lirios Blancos",
+      "url": "/images/products/HYDRANGEA-SELECTA-AZUL.png",
+      "altText": "HYDRANGEA SELECTA AZUL",
       "width": 1200,
       "height": 1200
     },
@@ -217,34 +217,34 @@
       "edges": [
         {
           "node": {
-            "url": "/images/products/lirios-blancos/1.jpg",
-            "altText": "Lirios Blancos",
+            "url": "/images/products/HYDRANGEA-SELECTA-AZUL.png",
+            "altText": "HYDRANGEA SELECTA AZUL",
             "width": 1200,
             "height": 1200
           }
         }
       ]
     },
-    "seo": { "title": "Lirios Blancos - Dos Palmas Farm", "description": "Lirios blancos elegantes para ocasiones especiales" },
-    "tags": ["lirios", "blancos", "elegantes"],
+    "seo": { "title": "HYDRANGEA SELECTA AZUL - Dos Palmas Farm", "description": "Hortensias elegantes para ocasiones especiales" },
+    "tags": ["Hortensias", "azules", "elegantes"],
     "updatedAt": "2025-01-03T00:00:00Z",
     "vendor": "Dos Palmas Farm",
     "collections": { "nodes": [ { "title": "Flores Elegantes" } ] }
   },
   {
     "id": "flor-4",
-    "handle": "tulipanes-multicolor",
+    "handle": "HYDRANGEA MINI VERDE",
     "availableForSale": true,
-    "title": "Tulipanes Multicolor",
-    "description": "Hermosos tulipanes en colores vibrantes que anuncian la llegada de la primavera. Perfectos para alegrar cualquier día.",
-    "descriptionHtml": "<p>Hermosos tulipanes en colores vibrantes que anuncian la llegada de la primavera. Perfectos para alegrar cualquier día.</p>",
+    "title": "HYDRANGEA MINI VERDE",
+    "description": "Hermosas hortensias en colores vibrantes que anuncian la llegada de la primavera. Perfectos para alegrar cualquier día.",
+    "descriptionHtml": "<p>Hermosas hortensias en colores vibrantes que anuncian la llegada de la primavera. Perfectos para alegrar cualquier día.</p>",
     "options": [
-      { "id": "opt-cantidad", "name": "Cantidad", "values": ["10 unidades", "15 unidades", "20 unidades"] },
-      { "id": "opt-colores", "name": "Colores", "values": ["Mixto", "Rosa y Amarillo", "Rojo y Blanco"] }
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 60-70"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
     ],
     "priceRange": {
       "maxVariantPrice": { "amount": "40.00", "currencyCode": "USD" },
-      "minVariantPrice": { "amount": "18.00", "currencyCode": "USD" }
+      "minVariantPrice": { "amount": "0.33", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
       "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
@@ -278,8 +278,8 @@
       ]
     },
     "featuredImage": {
-      "url": "/images/products/tulipanes-multicolor/1.jpg",
-      "altText": "Tulipanes Multicolor",
+      "url": "/images/products/HYDRANGEA-MINI-VERDE.png",
+      "altText": "HYDRANGEA MINI VERDE",
       "width": 1200,
       "height": 1200
     },
@@ -287,37 +287,37 @@
       "edges": [
         {
           "node": {
-            "url": "/images/products/tulipanes-multicolor/1.jpg",
-            "altText": "Tulipanes Multicolor",
+            "url": "/images/products/HYDRANGEA-MINI-VERDE.png",
+            "altText": "HYDRANGEA MINI VERDE",
             "width": 1200,
             "height": 1200
           }
         }
       ]
     },
-    "seo": { "title": "Tulipanes Multicolor - Dos Palmas Farm", "description": "Tulipanes coloridos para alegrar tu hogar" },
-    "tags": ["tulipanes", "multicolor", "primavera"],
+    "seo": { "title": "HYDRANGEA MINI VERDE - Dos Palmas Farm", "description": "Hortensias coloridas para alegrar tu hogar" },
+    "tags": ["hortensias", "verdes", "mini"],
     "updatedAt": "2025-01-04T00:00:00Z",
     "vendor": "Dos Palmas Farm",
     "collections": { "nodes": [ { "title": "Flores de Primavera" } ] }
   },
   {
     "id": "flor-5",
-    "handle": "orquideas-moradas",
+    "handle": "HYDRANGEA SELECTA BLANCA",
     "availableForSale": true,
-    "title": "Orquídeas Moradas",
-    "description": "Exóticas orquídeas moradas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
-    "descriptionHtml": "<p>Exóticas orquídeas moradas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "title": "HYDRANGEA SELECTA BLANCA",
+    "description": "Exóticas hortensias blancas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas hortensias blancas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
     "options": [
-      { "id": "opt-cantidad", "name": "Cantidad", "values": ["1 planta", "2 plantas", "3 plantas"] },
-      { "id": "opt-maceta", "name": "Maceta", "values": ["Plástico", "Cerámica", "Decorativa"] }
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40-50"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
       "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
-      "minVariantPrice": { "amount": "35.00", "currencyCode": "USD" }
+      "minVariantPrice": { "amount": "0.37", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
-      "maxVariantPrice": { "amount": "95.00", "currencyCode": "USD" }
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
     },
     "variants": {
       "edges": [
@@ -348,7 +348,147 @@
       ]
     },
     "featuredImage": {
-      "url": "/images/products/orquideas-moradas/1.jpg",
+      "url": "/images/products/HYDRANGEA-SELECTA-BLANCA.png",
+      "altText": "HYDRANGEA-SELECTA-BLANCA",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/HYDRANGEA-SELECTA-BLANCA.png",
+            "altText": "HYDRANGEA-SELECTA-BLANCA",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "HYDRANGEA SELECTA BLANCA - Dos Palmas Farm", "description": "Hortensias blancas exóticas y elegantes" },
+    "tags": ["hortensias", "blancas", "exoticas"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-6",
+    "handle": "HYDRANGEA ANTIQUE ROJA PREMIUM",
+    "availableForSale": true,
+    "title": "HYDRANGEA ANTIQUE ROJA PREMIUM",
+    "description": "Exóticas hortensias rojas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas hortensias rojas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 25-30"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["50QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "0.85", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/HYDRANGEA-ANTIQUE-ROJA-PREMIUM.png",
+      "altText": "HYDRANGEA ANTIQUE ROJA PREMIUM",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/HYDRANGEA-ANTIQUE-ROJA-PREMIUM.png",
+            "altText": "HYDRANGEA ANTIQUE ROJA PREMIUM",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "HYDRANGEA ANTIQUE ROJA PREMIUM - Dos Palmas Farm", "description": "Hortensias rojas exóticas y elegantes" },
+    "tags": ["hortensias", "rojas", "premium"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-7",
+    "handle": "HYDRANGEA SELECTA ESMERALDA",
+    "availableForSale": true,
+    "title": "HYDRANGEA SELECTA ESMERALDA",
+    "description": "Exóticas hortensias  que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas hortensias  que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40-50"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["50QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "0.65", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/HYDRANGEA-SELECTA-ESMERALDA.png",
       "altText": "Orquídeas Moradas",
       "width": 1200,
       "height": 1200
@@ -357,7 +497,7 @@
       "edges": [
         {
           "node": {
-            "url": "/images/products/orquideas-moradas/1.jpg",
+            "url": "/images/products/HYDRANGEA-SELECTA-ESMERALDA.png",
             "altText": "Orquídeas Moradas",
             "width": 1200,
             "height": 1200
@@ -365,8 +505,708 @@
         }
       ]
     },
-    "seo": { "title": "Orquídeas Moradas - Dos Palmas Farm", "description": "Orquídeas moradas exóticas y elegantes" },
-    "tags": ["orquideas", "moradas", "exoticas"],
+    "seo": { "title": "HYDRANGEA SELECTA ESMERALDA - Dos Palmas Farm", "description": "Hortensias blancas exóticas y elegantes" },
+    "tags": ["hortensias", "esmeralda", "selecta"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-8",
+    "handle": "HYDRANGEA ANTIQUE VERDE PREMIUM",
+    "availableForSale": true,
+    "title": "HYDRANGEA ANTIQUE VERDE PREMIUM",
+    "description": "Exóticas hortensias verdes que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas hortensias verdes que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 25-30"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["50QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "0.85", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/HYDRANGEA-ANTIQUE-VERDE-PREMIUM.png",
+      "altText": "HYDRANGEA-ANTIQUE-VERDE-PREMIUM",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/HYDRANGEA-ANTIQUE-VERDE-PREMIUM.png",
+            "altText": "HYDRANGEA-ANTIQUE-VERDE-PREMIUM",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "HYDRANGEA ANTIQUE VERDE PREMIUM - Dos Palmas Farm", "description": "Hortensias blancas exóticas y elegantes" },
+    "tags": ["hortensias", "verdes", "premium"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-9",
+    "handle": "HYDRANGEA SELECTA PURPLE",
+    "availableForSale": true,
+    "title": "HYDRANGEA SELECTA PURPLE",
+    "description": "Exóticas hortensias moradas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas hortensias blancas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40-50"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["50QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "0.87", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/HYDRANGEA-SELECTA-PURPLE.png",
+      "altText": "HYDRANGEA SELECTA PURPLE",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/HYDRANGEA-SELECTA-PURPLE.png",
+            "altText": "HYDRANGEA SELECTA PURPLE",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "HYDRANGEA SELECTA PURPLE - Dos Palmas Farm", "description": "Hortensias blancas exóticas y elegantes" },
+    "tags": ["hortensias", "moradas", "selecta"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-10",
+    "handle": "HYDRANGEA TINTURADA ROSADA",
+    "availableForSale": true,
+    "title": "HYDRANGEA TINTURADA ROSADA",
+    "description": "Exóticas hortensias rosadas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas hortensias rosadas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40-50"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "1.06", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/HYDRANGEA-TINTURADA-ROSADA.png",
+      "altText": "HYDRANGEA TINTURADA ROSADA",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/HYDRANGEA-TINTURADA-ROSADA.png",
+            "altText": "HYDRANGEA TINTURADA ROSADA",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "HYDRANGEA TINTURADA ROSADA - Dos Palmas Farm", "description": "Hortensias blancas exóticas y elegantes" },
+    "tags": ["hortensias", "rosadas", "tinturadas"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-11",
+    "handle": "RUSCUS",
+    "availableForSale": true,
+    "title": "RUSCUS",
+    "description": "Elegantes ruscus que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Elegantes ruscus que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 50"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "1.03", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/RUSCUS.png",
+      "altText": "RUSCUS",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/RUSCUS.png",
+            "altText": "RUSCUS",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "RUSCUS - Dos Palmas Farm", "description": "Ruscus elegantes para ocasiones especiales" },
+    "tags": ["ruscus", "elegantes"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-12",
+    "handle": "SHOCKING AZUL SELECTA",
+    "availableForSale": true,
+    "title": "SHOCKING AZUL SELECTA",
+    "description": "Espeluznante rosas azules que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Espeluznante rosas azules que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "0.55", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/SHOCKING-AZUL-SELECTA.png",
+      "altText": "SHOCKING AZUL SELECTA",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/SHOCKING-AZUL-SELECTA.png",
+            "altText": "SHOCKING AZUL SELECTA",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "SHOCKING AZUL SELECTA - Dos Palmas Farm", "description": "Rosas azules espeluznantes para ocasiones especiales" },
+    "tags": ["rosas", "azules", "espeluznantes"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-13",
+    "handle": "LILA SELECTA",
+    "availableForSale": true,
+    "title": "LILA SELECTA",
+    "description": "Exóticas rosas lila que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas rosas lila que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["30QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "0.87", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/LILA-SELECTA.png",
+      "altText": "LILA SELECTA",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/LILA-SELECTA.png",
+            "altText": "LILA SELECTA",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "LILA SELECTA - Dos Palmas Farm", "description": "Rosas lila exóticas y elegantes" },
+    "tags": ["rosas", "lila", "exoticas"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-14",
+    "handle": "ASTER SOLIDAGO",
+    "availableForSale": true,
+    "title": "ASTER SOLIDAGO",
+    "description": "Exóticas rosas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas rosas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 20"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "1.03", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/ASTER-SOLIDAGO.png",
+      "altText": "ASTER SOLIDAGO",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/ASTER-SOLIDAGO.png",
+            "altText": "ASTER SOLIDAGO",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "ASTER SOLIDAGO - Dos Palmas Farm", "description": "Rosas exóticas y elegantes" },
+    "tags": ["rosas", "solidago", "exoticas"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-15",
+    "handle": "ASTER TINTURADO",
+    "availableForSale": true,
+    "title": "ASTER TINTURADO",
+    "description": "Exóticas rosas tinturadas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas rosas tinturadas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 20"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "2.04", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/ASTER-TINTURADO.png",
+      "altText": "ASTER TINTURADO",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/ASTER-TINTURADO.png",
+            "altText": "ASTER TINTURADO",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "ASTER TINTURADO - Dos Palmas Farm", "description": "Rosas tinturadas exóticas y elegantes" },
+    "tags": ["rosas", "tinturadas", "exoticas"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-16",
+    "handle": "HORTENSIA TINTURADA",
+    "availableForSale": true,
+    "title": "HORTENSIA TINTURADA",
+    "description": "Exóticas hortensias tinturadas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas hortensias tinturadas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40-50"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "0.85", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/HORTENSIA-TINTURADA.png",
+      "altText": "HORTENSIA TINTURADA",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/HORTENSIA-TINTURADA.png",
+            "altText": "HORTENSIA TINTURADA",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "HORTENSIA TINTURADA - Dos Palmas Farm", "description": "Hortensias tinturadas exóticas y elegantes" },
+    "tags": ["hortensias", "tinturadas", "exoticas"],
+    "updatedAt": "2025-01-05T00:00:00Z",
+    "vendor": "Dos Palmas Farm",
+    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+  },
+  {
+    "id": "flor-17",
+    "handle": "RUSCUS TINTED",
+    "availableForSale": true,
+    "title": "RUSCUS TINTED",
+    "description": "Ruscus tinturados que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Ruscus tinturados que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "options": [
+      { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 50"] },
+      { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
+    ],
+    "priceRange": {
+      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "minVariantPrice": { "amount": "3.00", "currencyCode": "USD" }
+    },
+    "compareAtPriceRange": {
+      "maxVariantPrice": { "amount": "0.00", "currencyCode": "USD" }
+    },
+    "variants": {
+      "edges": [
+        {
+          "node": {
+            "id": "var-orquideas-1",
+            "title": "1 planta / Plástico",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "1 planta" },
+              { "name": "Maceta", "value": "Plástico" }
+            ],
+            "price": { "amount": "35.00", "currencyCode": "USD" }
+          }
+        },
+        {
+          "node": {
+            "id": "var-orquideas-2",
+            "title": "2 plantas / Cerámica",
+            "availableForSale": true,
+            "selectedOptions": [
+              { "name": "Cantidad", "value": "2 plantas" },
+              { "name": "Maceta", "value": "Cerámica" }
+            ],
+            "price": { "amount": "65.00", "currencyCode": "USD" }
+          }
+        }
+      ]
+    },
+    "featuredImage": {
+      "url": "/images/products/RUSCUS-TINTED.png",
+      "altText": "RUSCUS TINTED",
+      "width": 1200,
+      "height": 1200
+    },
+    "images": {
+      "edges": [
+        {
+          "node": {
+            "url": "/images/products/RUSCUS-TINTED.png",
+            "altText": "RUSCUS TINTED",
+            "width": 1200,
+            "height": 1200
+          }
+        }
+      ]
+    },
+    "seo": { "title": "RUSCUS TINTED - Dos Palmas Farm", "description": "Ruscus tinturados exóticas y elegantes" },
+    "tags": ["ruscus", "tinturados", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
     "collections": { "nodes": [ { "title": "Orquídeas" } ] }

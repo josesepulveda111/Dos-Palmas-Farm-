@@ -8,11 +8,11 @@ draft: false
 #About Us
 about_us:
   - title: "Our Company"
-    image: "/images/aboutUs.png"
+    video: "/videos/Video1.mp4"
     content: "Since 2002, we have built a very large organization for growing and marketing all types of Hydrangeas in the Valley of Rionegro, Antioquia, Colombia; We have over 35 Hectares of our own farmland dedicated to grow the latest varieties requested by the world market. The East Antioquia area is the most convenient area with the perfect conditions and labor to produced all type of Hydrangeas, located only 25 minutes (15km) from the Rionegro Airport facilities."
 
   - title: "Who We Are ?"
-    image: "/images/aboutUs.png"
+    image: "/images/about.png"
     content: "At Dos Palmas Farms S.A.S we have specialized our farms for growing Hydrangea(Korea Style), Ruscus, and Aster Solidago(white and purple).Aside from our own production, we have become leaders in consolidation, selection, post harvest, and packing for many of our neighboring grower villages surrounding Rionegro , as many of these small growers lack in infrastructure and knowledge to prepare the final product"
 
 # Frequently Asked Questions
@@ -39,7 +39,7 @@ faqs:
     content: "Absolutely! You can sell themes created with our lamps, providing stylish solutions for diverse design needs. Absolutely! You can sell themes created with our lamps, providing stylish solutions for diverse design needs."
 
 # Testimonials
-testimonials_section_enable: true
+testimonials_section_enable: false
 testimonials_section_title: "What Our Client Says"
 testimonials:
   - name: "Ava Sinclair"
@@ -63,7 +63,7 @@ testimonials:
     content: "Shopplate has been a game-changer for our e-commerce setup. This Astro-Shopify boilerplate blends the speed and flexibility of Astro with the powerful e-commerce capabilities of Shopify, giving us the perfect foundation for a high-performance, modern storefront. Setup was smooth, and it’s optimized for seamless integration with Shopify’s API, so we were able to get our site up and running quickly without compromising on customizations or functionality. Shopplate’s clean codebase and scalability make it an ideal solution for any team looking to leverage Astro’s benefits in an e-commerce context. Highly recommended for anyone looking to streamline their Shopify store with the speed of Astro!"
 
 # Our Staff
-staff_section_enable: true
+staff_section_enable: false
 staff:
   - name: "Marvin McKinney"
     designation: "Web Designer"

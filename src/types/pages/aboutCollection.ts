@@ -14,7 +14,9 @@ export const aboutCollection = defineCollection({
     about_us: z.array(
       z.object({
         title: z.string(),
-        image: z.string(),
+        image: z.string().optional(),
+        video: z.string().optional(),
+        poster: z.string().optional(),
         content: z.string(),
       }),
     ),

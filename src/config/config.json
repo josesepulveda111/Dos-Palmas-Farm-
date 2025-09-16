@@ -5,8 +5,8 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo_circulo_80.png",
-    "logo_darkmode": "/images/logo.png",
+    "logo": "/images/logo_transparente.png",
+    "logo_darkmode": "/images/logo_transparente.png",
     "logo_width": "80",
     "logo_height": "60",
     "logo_text": "Dos Palmas Farm"
