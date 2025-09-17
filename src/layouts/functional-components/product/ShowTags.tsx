@@ -5,7 +5,7 @@ const ShowTags = ({ tags }: { tags: string[] }) => {
   const [searchParams, setSearchParams] = useState(
     new URLSearchParams(window.location.search)
   );
-  const selectedTag = searchParams.get("t");
+  const selectedTags = searchParams.getAll("t");
 
   const updateSearchParams = (newParams: URLSearchParams) => {
     const newParamsString = newParams.toString();
@@ -21,11 +21,11 @@ const ShowTags = ({ tags }: { tags: string[] }) => {
     const slugName = slugify(name.toLowerCase());
     const newParams = new URLSearchParams(searchParams.toString());
 
-    if (slugName === selectedTag) {
-      newParams.delete("t");
-    } else {
-      newParams.set("t", slugName);
-    }
+    const current = newParams.getAll("t");
+    const exists = current.includes(slugName);
+    newParams.delete("t");
+    const next = exists ? current.filter((t) => t !== slugName) : [...current, slugName];
+    next.forEach((t) => newParams.append("t", t));
 
     updateSearchParams(newParams);
   };
@@ -35,7 +35,7 @@ const ShowTags = ({ tags }: { tags: string[] }) => {
       {tags.map((tag) => (
         <button
           key={tag}
-          className={`cursor-pointer px-2 py-1 rounded-md border border-border dark:border-darkmode-border text-text-light dark:text-darkmode-text-light ${selectedTag === slugify(tag.toLowerCase()) &&
+          className={`cursor-pointer px-2 py-1 rounded-md border border-border dark:border-darkmode-border text-text-light dark:text-darkmode-text-light ${selectedTags.includes(slugify(tag.toLowerCase())) &&
             "bg-light dark:bg-dark"
             }`}
           onClick={() => handleTagClick(tag)}

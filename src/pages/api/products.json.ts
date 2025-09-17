@@ -7,12 +7,24 @@ export const GET: APIRoute = async ({ request }) => {
   const cursor = url.searchParams.get("cursor");
   const sortKey = url.searchParams.get("sortKey") as string;
   const reverse = url.searchParams.get("reverse") === "true";
+  const minPriceParam = url.searchParams.get("minPrice");
+  const maxPriceParam = url.searchParams.get("maxPrice");
+  const minPrice = minPriceParam ? Number(minPriceParam) : undefined;
+  const maxPrice = maxPriceParam ? Number(maxPriceParam) : undefined;
+  const categories = url.searchParams.getAll("c");
+  const tags = url.searchParams.getAll("t");
+  const search = url.searchParams.get("q") || undefined;
 
   try {
     const { products, pageInfo } = await getLocalProducts({
       sortKey,
       reverse,
       cursor: cursor || undefined,
+      minPrice,
+      maxPrice,
+      categories: categories.length ? categories : undefined,
+      tags: tags.length ? tags : undefined,
+      search,
     });
 
     return new Response(JSON.stringify({ products, pageInfo }), {

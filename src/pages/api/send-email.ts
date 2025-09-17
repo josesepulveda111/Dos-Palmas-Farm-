@@ -53,7 +53,7 @@ export const POST: APIRoute = async ({ request }) => {
         name: 'Dos Palmas Farm',
         address: 'notificaciones.generales00@gmail.com'
       },
-      to: customerInfo.email,
+      to: [customerInfo.email, 'info@dospalmasfarms.com.co', 'dospalmasfarms@gmail.com'],
       subject: `🌹 Confirmación de Pedido - ${customerInfo.name}`,
       html: emailHTML
     };

@@ -37,9 +37,11 @@ const ProductGrid = ({
 
     setLoading(true);
     try {
-      const response = await fetch(
-        `/api/products.json?cursor=${pageInfo.endCursor || ""}&sortKey=${currentSortKey}&reverse=${currentReverse}`
-      );
+      const params = new URLSearchParams(window.location.search);
+      params.set("cursor", pageInfo.endCursor || "");
+      params.set("sortKey", currentSortKey);
+      params.set("reverse", String(currentReverse));
+      const response = await fetch(`/api/products.json?${params.toString()}`);
       if (!response.ok) throw new Error("Failed to fetch");
       const { products: newProducts, pageInfo: newPageInfo } = await response.json();
 

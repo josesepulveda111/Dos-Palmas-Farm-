@@ -1,5 +1,5 @@
 import type { Collection } from "@/lib/types";
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import ShowTags from "./product/ShowTags";
 import RangeSlider from "./rangeSlider/RangeSlider";
 
@@ -18,7 +18,7 @@ const ProductFilters = ({
     new URLSearchParams(window.location.search)
   );
 
-  const selectedCategory = searchParams.get("c");
+  const selectedCategories = useMemo(() => searchParams.getAll("c"), [searchParams]);
 
   const updateSearchParams = (newParams: URLSearchParams) => {
     const newUrl = `${window.location.pathname}?${newParams.toString()}`;
@@ -28,12 +28,11 @@ const ProductFilters = ({
 
   const handleCategoryClick = (handle: string) => {
     const newParams = new URLSearchParams(searchParams.toString());
-
-    if (handle === selectedCategory) {
-      newParams.delete("c");
-    } else {
-      newParams.set("c", handle);
-    }
+    const current = newParams.getAll("c");
+    const exists = current.includes(handle);
+    newParams.delete("c");
+    const next = exists ? current.filter((c) => c !== handle) : [...current, handle];
+    next.forEach((c) => newParams.append("c", c));
     updateSearchParams(newParams);
   };
 
@@ -54,7 +53,7 @@ const ProductFilters = ({
           {categories.map((category) => (
             <li
               key={category.handle}
-              className={`flex items-center justify-between cursor-pointer ${selectedCategory === category.handle
+              className={`flex items-center justify-between cursor-pointer ${selectedCategories.includes(category.handle)
                 ? "text-text-dark dark:text-darkmode-text-dark font-semibold"
                 : "text-text-light dark:text-darkmode-text-light"
                 }`}

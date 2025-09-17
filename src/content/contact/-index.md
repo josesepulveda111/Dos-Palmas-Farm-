@@ -10,7 +10,7 @@ contact_meta:
     contact: "Carrera 48 # 42 - 12 </br> Rionegro </br> Antioquia - Colombia"
 
   - name: "Email"
-    contact: "dospalmasfarm@outlook.com </br> info@dospalmasfarms.com.co"
+    contact: "info@dospalmasfarms.com.co </br> dospalmasfarm@gmail.com"
 
   - name: "Phone"
     contact: "CO: 57 (312)825-7055 </br> USA: 1(305)999-7418"

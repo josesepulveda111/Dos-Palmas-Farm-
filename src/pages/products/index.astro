@@ -11,16 +11,16 @@ import type { PageInfo, Product } from "@/lib/types";
 import CallToAction from "@/partials/CallToAction.astro";
 
 const searchParams = Astro.url.searchParams;
-const searchParamsObject = Object.fromEntries(searchParams.entries());
-
-const sort = searchParamsObject.sort || "";
-const searchValue = searchParamsObject.q || "";
-const minPrice = searchParamsObject.minPrice || "";
-const maxPrice = searchParamsObject.maxPrice || "";
-const brand = searchParamsObject.b || "";
-const category = searchParamsObject.c || "all";
-const tag = searchParamsObject.t || "";
-const cursor = searchParamsObject.cursor || null;
+const sort = searchParams.get("sort") || "";
+const searchValue = searchParams.get("q") || "";
+const minPriceParam = searchParams.get("minPrice");
+const maxPriceParam = searchParams.get("maxPrice");
+const minPrice = minPriceParam ? Number(minPriceParam) : undefined;
+const maxPrice = maxPriceParam ? Number(maxPriceParam) : undefined;
+const brand = searchParams.get("b") || "";
+const categoriesSelected = searchParams.getAll("c");
+const tagsSelected = searchParams.getAll("t");
+const cursor = searchParams.get("cursor") || null;
 
 const { sortKey, reverse } =
   sorting.find((item) => item.slug === sort) || defaultSort;
@@ -29,46 +29,18 @@ let productsData: any;
 let vendorsWithCounts: { vendor: string; productCount: number }[] = [];
 let categoriesWithCounts: { category: string; productCount: number }[] = [];
 
-if (searchValue || brand || minPrice || maxPrice || category || tag) {
-  let queryParts: string[] = [];
-
-  if (minPrice || maxPrice) {
-    if (minPrice) {
-      queryParts.push(`variants.price:>=${minPrice}`);
-    }
-    if (maxPrice) {
-      queryParts.push(`variants.price:<=${maxPrice}`);
-    }
-  }
-
-  if (searchValue) {
-    queryParts.push(searchValue);
-  }
-
-  if (brand) {
-    if (Array.isArray(brand)) {
-      const brandQuery = brand.map((b) => `(vendor:${b})`).join(" OR ");
-      queryParts.push(brandQuery);
-    } else {
-      queryParts.push(`vendor:"${brand}"`);
-    }
-  }
-
-  if (tag) {
-    queryParts.push(tag);
-  }
-
-  const queryString = queryParts.join(" ");
-
-  const query = {
-    sortKey,
-    reverse,
-    query: queryString,
-    cursor: cursor || undefined,
-  };
-
+if (searchValue || brand || typeof minPrice === 'number' || typeof maxPrice === 'number' || categoriesSelected.length > 0 || tagsSelected.length > 0) {
   try {
-    productsData = await getLocalProducts(query);
+    productsData = await getLocalProducts({
+      sortKey,
+      reverse,
+      cursor: cursor || undefined,
+      categories: categoriesSelected,
+      tags: tagsSelected,
+      minPrice,
+      maxPrice,
+      search: searchValue,
+    });
   } catch (error) {
     console.error("Error fetching products:", error);
     productsData = { products: [] };
@@ -121,6 +93,28 @@ if (searchValue || brand || minPrice || maxPrice || category || tag) {
     console.error("Error fetching products:", error);
     productsData = { products: [] };
   }
+
+  // Calculate category counts for all products when no filters are applied
+  const uniqueCategories: string[] = [
+    ...new Set(
+      ((productsData?.products as Product[]) || []).flatMap(
+        (product: Product) =>
+          product.collections.nodes.map(
+            (collectionNode: any) => collectionNode.title || ""
+          )
+      )
+    ),
+  ];
+
+  categoriesWithCounts = uniqueCategories.map((category: string) => {
+    const productCount = ((productsData?.products as Product[]) || []).filter(
+      (product: Product) =>
+        product.collections.nodes.some(
+          (collectionNode: any) => collectionNode.title === category
+        )
+    ).length;
+    return { category, productCount };
+  });
 }
 
 const categories = await getLocalCollections();

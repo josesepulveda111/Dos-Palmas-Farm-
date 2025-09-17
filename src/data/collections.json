@@ -1,8 +1,8 @@
 [
-  { "handle": "hortensias", "title": "Hortensias tinturadas", "description": "Hermosas rosas frescas en diferentes colores" },
-  { "handle": "flores-de-campo", "title": "Flores de Campo", "description": "Flores silvestres y de campo" },
-  { "handle": "flores-elegantes", "title": "Flores Elegantes", "description": "Flores elegantes para ocasiones especiales" },
-  { "handle": "flores-de-primavera", "title": "Flores de Primavera", "description": "Flores coloridas de primavera" },
-  { "handle": "hortensias-blancas", "title": "Hortensias blancas", "description": "Exóticas orquídeas de larga duración" }
+  { "handle": "hortensias", "title": "Hortensias tinturadas", "description": "Hermosas hortensias frescas en diferentes colores" },
+  { "handle": "flores-de-campo", "title": "Flores de Campo", "description": "Hortensias silvestres y de campo" },
+  { "handle": "flores-elegantes", "title": "Flores Elegantes", "description": "Hortensias elegantes para ocasiones especiales" },
+  { "handle": "flores-de-primavera", "title": "Flores de Primavera", "description": "Hortensias coloridas de primavera" },
+  { "handle": "hortensias-blancas", "title": "Hortensias blancas", "description": "Exóticas hortensias de larga duración" }
 ]
 

@@ -16,6 +16,7 @@ const RangeSlider = ({
   const maxAmount = parseInt(maxPriceData?.amount);
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(maxAmount);
+  const [hasChanged, setHasChanged] = useState(false);
 
   const rangeRef = useRef<HTMLDivElement>(null);
   const minThumbRef = useRef<HTMLDivElement>(null);
@@ -78,6 +79,7 @@ const RangeSlider = ({
           Math.min(maxValue - 1, Math.round((newPercent * maxAmount) / 100))
         );
         setMinValue(newValue);
+        setHasChanged(true);
       } else {
         const newPercent = (initialMaxVal / maxAmount) * 100 + dPercent;
         const newValue = Math.max(
@@ -85,6 +87,7 @@ const RangeSlider = ({
           Math.min(maxAmount, Math.round((newPercent * maxAmount) / 100))
         );
         setMaxValue(newValue);
+        setHasChanged(true);
       }
     };
 
@@ -106,10 +109,7 @@ const RangeSlider = ({
     window.location.href = newUrl;
   }
 
-  const showSubmitButton =
-    (minValue !== (getMinPrice ? parseInt(getMinPrice) : 0) ||
-      maxValue !== (getMaxPrice ? parseInt(getMaxPrice) : maxAmount)) &&
-    (minValue !== 0 || maxValue !== maxAmount);
+  const showSubmitButton = hasChanged;
 
   return (
     <div className="range-slider-container">

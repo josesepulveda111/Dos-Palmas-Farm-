@@ -1,5 +1,5 @@
 ---
-enable: true
+enable: false
 title: "Curved Collection for Your
 Bedroom Get 25% Off"
 sub_title: "Deal of the Week"

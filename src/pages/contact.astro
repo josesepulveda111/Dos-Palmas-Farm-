@@ -10,7 +10,7 @@ const contact = (await getEntry(
   "contact",
   "-index"
 )) as CollectionEntry<"contact">;
-const { contact_form_action }: { contact_form_action: string } = config.params;
+const contact_form_action = '/api/contact-email';
 const { title, meta_title, description, image, contact_meta } = contact.data;
 ---
 
@@ -53,12 +53,12 @@ const { title, meta_title, description, image, contact_meta } = contact.data;
         >
           <div class="mb-6 md:grid grid-cols-2 gap-x-8 max-md:space-y-6">
             <div>
-              <label for="name" class="form-label">
+              <label for="firstName" class="form-label">
                 First Name <span class="text-red-500">*</span>
               </label>
               <input
-                id="name"
-                name="name"
+                id="firstName"
+                name="firstName"
                 class="form-input"
                 placeholder="John"
                 type="text"
@@ -67,10 +67,10 @@ const { title, meta_title, description, image, contact_meta } = contact.data;
             </div>
 
             <div>
-              <label for="name" class="form-label"> Last Name </label>
+              <label for="lastName" class="form-label"> Last Name </label>
               <input
-                id="name"
-                name="name"
+                id="lastName"
+                name="lastName"
                 class="form-input"
                 placeholder="Doe"
                 type="text"
@@ -94,12 +94,12 @@ const { title, meta_title, description, image, contact_meta } = contact.data;
             </div>
 
             <div>
-              <label for="name" class="form-label">
+              <label for="subject" class="form-label">
                 Subject <span class="text-red-500">*</span>
               </label>
               <input
-                id="name"
-                name="name"
+                id="subject"
+                name="subject"
                 class="form-input"
                 placeholder="Enquiry About"
                 type="text"

@@ -5,13 +5,13 @@
     "availableForSale": true,
     "title": "HYD TINTURADA SUPER",
     "description": "Hermosas hortensias tinturadas, perfectas para expresar amor y pasión. Cultivadas con cuidado en nuestra granja.",
-    "descriptionHtml": "<p>Hermosas rosas frescas, perfectas para expresar amor y pasión. Cultivadas con cuidado en nuestra granja.</p>",
+    "descriptionHtml": "<p>Hermosas hortensias tinturadas, perfectas para expresar amor y pasión. Cultivadas con cuidado en nuestra granja.</p>",
     "options": [
       { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 30"] },
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "15.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.95", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.95", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -83,13 +83,13 @@
     "availableForSale": true,
     "title": "ANTIQUE GREEN",
     "description": "Hortensias verdes, brillantes y alegres que traen la energía del sol a tu hogar. Perfectos para decorar cualquier espacio.",
-    "descriptionHtml": "<p>Rosas brillantes y alegres que traen la energía del sol a tu hogar. Perfectos para decorar cualquier espacio.</p>",
+    "descriptionHtml": "<p>Hortensias verdes, brillantes y alegres que traen la energía del sol a tu hogar. Perfectos para decorar cualquier espacio.</p>",
     "options": [
       { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 20"] },
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "35.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "1.06", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "1.06", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -155,7 +155,7 @@
         }
       ]
     },
-    "seo": { "title": "ANTIQUE GREEN - Dos Palmas Farm", "description": "Rosas frescas y alegres" },
+    "seo": { "title": "ANTIQUE GREEN - Dos Palmas Farm", "description": "Hortensias frescas y alegres" },
     "tags": ["hortensias", "verdes", "antiguos"],
     "updatedAt": "2025-01-02T00:00:00Z",
     "vendor": "Dos Palmas Farm",
@@ -173,7 +173,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "65.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.45", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.45", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -243,7 +243,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "40.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.33", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.33", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -313,7 +313,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.37", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.37", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -383,7 +383,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["50QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.85", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.85", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -453,7 +453,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["50QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.65", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.65", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -523,7 +523,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["50QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.85", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.85", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -593,7 +593,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["50QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.87", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.87", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -663,7 +663,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "1.06", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "1.06", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -733,7 +733,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "1.03", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "1.03", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -796,14 +796,14 @@
     "handle": "SHOCKING AZUL SELECTA",
     "availableForSale": true,
     "title": "SHOCKING AZUL SELECTA",
-    "description": "Espeluznante rosas azules que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
-    "descriptionHtml": "<p>Espeluznante rosas azules que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "description": "Espeluznante hortensias azules que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Espeluznante hortensias azules que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
     "options": [
       { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40"] },
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.55", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.55", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -855,8 +855,8 @@
         }
       ]
     },
-    "seo": { "title": "SHOCKING AZUL SELECTA - Dos Palmas Farm", "description": "Rosas azules espeluznantes para ocasiones especiales" },
-    "tags": ["rosas", "azules", "espeluznantes"],
+    "seo": { "title": "SHOCKING AZUL SELECTA - Dos Palmas Farm", "description": "Hortensias azules espeluznantes para ocasiones especiales" },
+    "tags": ["hortensias", "azules", "espeluznantes"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
     "collections": { "nodes": [ { "title": "Flores Elegantes" } ] }
@@ -866,14 +866,14 @@
     "handle": "LILA SELECTA",
     "availableForSale": true,
     "title": "LILA SELECTA",
-    "description": "Exóticas rosas lila que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
-    "descriptionHtml": "<p>Exóticas rosas lila que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "description": "Exóticas hortensias lila que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exóticas hortensias lila que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
     "options": [
       { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 40"] },
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["30QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.87", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.87", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -925,8 +925,8 @@
         }
       ]
     },
-    "seo": { "title": "LILA SELECTA - Dos Palmas Farm", "description": "Rosas lila exóticas y elegantes" },
-    "tags": ["rosas", "lila", "exoticas"],
+    "seo": { "title": "LILA SELECTA - Dos Palmas Farm", "description": "Hortensias lila exóticas y elegantes" },
+    "tags": ["hortensias", "lila", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
     "collections": { "nodes": [ { "title": "Flores Elegantes" } ] }
@@ -936,14 +936,14 @@
     "handle": "ASTER SOLIDAGO",
     "availableForSale": true,
     "title": "ASTER SOLIDAGO",
-    "description": "Exóticas rosas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
-    "descriptionHtml": "<p>Exóticas rosas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "description": "Exótico aster que añade un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exótico aster que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
     "options": [
       { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 20"] },
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["100QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "1.03", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "1.03", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -995,8 +995,8 @@
         }
       ]
     },
-    "seo": { "title": "ASTER SOLIDAGO - Dos Palmas Farm", "description": "Rosas exóticas y elegantes" },
-    "tags": ["rosas", "solidago", "exoticas"],
+    "seo": { "title": "ASTER SOLIDAGO - Dos Palmas Farm", "description": "Aster exóticas y elegantes" },
+    "tags": ["aster", "solidago", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
     "collections": { "nodes": [ { "title": "Flores de Primavera" } ] }
@@ -1006,14 +1006,14 @@
     "handle": "ASTER TINTURADO",
     "availableForSale": true,
     "title": "ASTER TINTURADO",
-    "description": "Exóticas rosas tinturadas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
-    "descriptionHtml": "<p>Exóticas rosas tinturadas que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
+    "description": "Exótico aster tinturado que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.",
+    "descriptionHtml": "<p>Exótico aster tinturado que añaden un toque de sofisticación y elegancia a cualquier ambiente. Flores de larga duración.</p>",
     "options": [
       { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 20"] },
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "2.04", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "2.04", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -1065,8 +1065,8 @@
         }
       ]
     },
-    "seo": { "title": "ASTER TINTURADO - Dos Palmas Farm", "description": "Rosas tinturadas exóticas y elegantes" },
-    "tags": ["rosas", "tinturadas", "exoticas"],
+    "seo": { "title": "ASTER TINTURADO - Dos Palmas Farm", "description": "Aster tinturadas exóticas y elegantes" },
+    "tags": ["aster", "tinturadas", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
     "collections": { "nodes": [ { "title": "Flores de Campo" } ] }
@@ -1083,7 +1083,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "0.85", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "0.85", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
@@ -1153,7 +1153,7 @@
       { "id": "opt-disponibilidad", "name": "Disponibilidad semanal", "values": ["200QB"] }
     ],
     "priceRange": {
-      "maxVariantPrice": { "amount": "85.00", "currencyCode": "USD" },
+      "maxVariantPrice": { "amount": "10.00", "currencyCode": "USD" },
       "minVariantPrice": { "amount": "3.00", "currencyCode": "USD" }
     },
     "compareAtPriceRange": {
