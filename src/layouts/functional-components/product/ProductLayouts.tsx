@@ -13,10 +13,8 @@ export type PathFilterItem = { title: string; path: string };
 
 const ProductLayouts = ({
   categories,
-  vendors,
   tags,
   maxPriceData,
-  vendorsWithCounts,
   categoriesWithCounts,
 }: any) => {
   const [isInputEditing, setInputEditing] = useState(false);
@@ -143,10 +141,8 @@ const ProductLayouts = ({
                     <Suspense>
                       <ProductFilters
                         categories={categories}
-                        vendors={vendors}
                         tags={tags}
                         maxPriceData={maxPriceData}
-                        vendorsWithCounts={vendorsWithCounts}
                         categoriesWithCounts={categoriesWithCounts}
                       />
                     </Suspense>

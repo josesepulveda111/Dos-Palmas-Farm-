@@ -4,7 +4,7 @@
     "handle": "hyd-tinturada-super",
     "availableForSale": true,
     "title": "HYD TINTURADA SUPER",
-    "description": "Hermosas rosas frescas, perfectas para expresar amor y pasión. Cultivadas con cuidado en nuestra granja.",
+    "description": "Hermosas hortensias tinturadas, perfectas para expresar amor y pasión. Cultivadas con cuidado en nuestra granja.",
     "descriptionHtml": "<p>Hermosas rosas frescas, perfectas para expresar amor y pasión. Cultivadas con cuidado en nuestra granja.</p>",
     "options": [
       { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 30"] },
@@ -71,18 +71,18 @@
         }
       ]
     },
-    "seo": { "title": "HYD TINTURADA SUPER - Dos Palmas Farm", "description": "Rosas rojas frescas para ocasiones especiales" },
+    "seo": { "title": "HYD TINTURADA SUPER - Dos Palmas Farm", "description": "Hortensias tinturadas frescas para ocasiones especiales" },
     "tags": ["hortensias", "tinturadas", "super"],
     "updatedAt": "2025-01-01T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Hortensias" } ] }
+    "collections": { "nodes": [ { "title": "Hortensias tinturadas" } ] }
   },
   {
     "id": "flor-2",
     "handle": "antique-green",
     "availableForSale": true,
     "title": "ANTIQUE GREEN",
-    "description": "Rosas brillantes y alegres que traen la energía del sol a tu hogar. Perfectos para decorar cualquier espacio.",
+    "description": "Hortensias verdes, brillantes y alegres que traen la energía del sol a tu hogar. Perfectos para decorar cualquier espacio.",
     "descriptionHtml": "<p>Rosas brillantes y alegres que traen la energía del sol a tu hogar. Perfectos para decorar cualquier espacio.</p>",
     "options": [
       { "id": "opt-empaque", "name": "Empaque", "values": ["QB x 20"] },
@@ -155,7 +155,7 @@
         }
       ]
     },
-    "seo": { "title": "ANTIQUE GREEN - Dos Palmas Farm", "description": "Girasoles frescos y alegres" },
+    "seo": { "title": "ANTIQUE GREEN - Dos Palmas Farm", "description": "Rosas frescas y alegres" },
     "tags": ["hortensias", "verdes", "antiguos"],
     "updatedAt": "2025-01-02T00:00:00Z",
     "vendor": "Dos Palmas Farm",
@@ -369,7 +369,7 @@
     "tags": ["hortensias", "blancas", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Hortensias blancas" } ] }
   },
   {
     "id": "flor-6",
@@ -439,7 +439,7 @@
     "tags": ["hortensias", "rojas", "premium"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores Elegantes" } ] }
   },
   {
     "id": "flor-7",
@@ -489,7 +489,7 @@
     },
     "featuredImage": {
       "url": "/images/products/HYDRANGEA-SELECTA-ESMERALDA.png",
-      "altText": "Orquídeas Moradas",
+      "altText": "HYDRANGEA-SELECTA-ESMERALDA",
       "width": 1200,
       "height": 1200
     },
@@ -498,7 +498,7 @@
         {
           "node": {
             "url": "/images/products/HYDRANGEA-SELECTA-ESMERALDA.png",
-            "altText": "Orquídeas Moradas",
+            "altText": "HYDRANGEA-SELECTA-ESMERALDA",
             "width": 1200,
             "height": 1200
           }
@@ -509,7 +509,7 @@
     "tags": ["hortensias", "esmeralda", "selecta"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores Elegantes" } ] }
   },
   {
     "id": "flor-8",
@@ -579,7 +579,7 @@
     "tags": ["hortensias", "verdes", "premium"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores de Primavera" } ] }
   },
   {
     "id": "flor-9",
@@ -649,7 +649,7 @@
     "tags": ["hortensias", "moradas", "selecta"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Hortensias tinturadas" } ] }
   },
   {
     "id": "flor-10",
@@ -719,7 +719,7 @@
     "tags": ["hortensias", "rosadas", "tinturadas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Hortensias tinturadas" } ] }
   },
   {
     "id": "flor-11",
@@ -789,7 +789,7 @@
     "tags": ["ruscus", "elegantes"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores de Campo" } ] }
   },
   {
     "id": "flor-12",
@@ -859,7 +859,7 @@
     "tags": ["rosas", "azules", "espeluznantes"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores Elegantes" } ] }
   },
   {
     "id": "flor-13",
@@ -929,7 +929,7 @@
     "tags": ["rosas", "lila", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores Elegantes" } ] }
   },
   {
     "id": "flor-14",
@@ -999,7 +999,7 @@
     "tags": ["rosas", "solidago", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores de Primavera" } ] }
   },
   {
     "id": "flor-15",
@@ -1069,7 +1069,7 @@
     "tags": ["rosas", "tinturadas", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores de Campo" } ] }
   },
   {
     "id": "flor-16",
@@ -1139,7 +1139,7 @@
     "tags": ["hortensias", "tinturadas", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Hortensias tinturadas" } ] }
   },
   {
     "id": "flor-17",
@@ -1209,7 +1209,7 @@
     "tags": ["ruscus", "tinturados", "exoticas"],
     "updatedAt": "2025-01-05T00:00:00Z",
     "vendor": "Dos Palmas Farm",
-    "collections": { "nodes": [ { "title": "Orquídeas" } ] }
+    "collections": { "nodes": [ { "title": "Flores de Campo" } ] }
   }
 ]
 

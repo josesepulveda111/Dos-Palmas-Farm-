@@ -172,7 +172,8 @@ const ProductList = ({
 
                   <div className="flex items-center gap-x-2 mt-2">
                     <span className="text-text-light dark:text-darkmode-text-light text-xs md:text-lg font-bold">
-                      ৳ {priceRange?.minVariantPrice?.amount}{" "}
+                      {currencySymbol}{" "}
+                      {priceRange?.minVariantPrice?.amount}{" "}
                       {priceRange?.minVariantPrice?.currencyCode}
                     </span>
                     {parseFloat(

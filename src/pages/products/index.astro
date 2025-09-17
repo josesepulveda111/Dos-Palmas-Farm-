@@ -5,7 +5,7 @@ import ProductLayoutViews from "@/functional-components/ProductLayoutViews";
 import Base from "@/layouts/Base.astro";
 import { defaultSort, sorting } from "@/lib/constants";
 // import { getCollectionProducts, getCollections, getHighestProductPrice, getProducts, getVendors } from "@/lib/shopify";
-import { getLocalProducts, getLocalTags, getLocalVendors } from "@/lib/local/products";
+import { getLocalProducts, getLocalTags, getLocalVendors, getLocalHighestProductPrice } from "@/lib/local/products";
 import { getLocalCollections } from "@/lib/local/collections";
 import type { PageInfo, Product } from "@/lib/types";
 import CallToAction from "@/partials/CallToAction.astro";
@@ -30,25 +30,35 @@ let vendorsWithCounts: { vendor: string; productCount: number }[] = [];
 let categoriesWithCounts: { category: string; productCount: number }[] = [];
 
 if (searchValue || brand || minPrice || maxPrice || category || tag) {
-  let queryString = "";
+  let queryParts: string[] = [];
 
   if (minPrice || maxPrice) {
-    queryString += `variants.price:<=${maxPrice} variants.price:>=${minPrice}`;
+    if (minPrice) {
+      queryParts.push(`variants.price:>=${minPrice}`);
+    }
+    if (maxPrice) {
+      queryParts.push(`variants.price:<=${maxPrice}`);
+    }
   }
 
   if (searchValue) {
-    queryString += ` ${searchValue}`;
+    queryParts.push(searchValue);
   }
 
   if (brand) {
-    Array.isArray(brand)
-      ? (queryString += `${brand.map((b) => `(vendor:${b})`).join(" OR ")}`)
-      : (queryString += `vendor:"${brand}"`);
+    if (Array.isArray(brand)) {
+      const brandQuery = brand.map((b) => `(vendor:${b})`).join(" OR ");
+      queryParts.push(brandQuery);
+    } else {
+      queryParts.push(`vendor:"${brand}"`);
+    }
   }
 
   if (tag) {
-    queryString += ` ${tag}`;
+    queryParts.push(tag);
   }
+
+  const queryString = queryParts.join(" ");
 
   const query = {
     sortKey,
@@ -124,7 +134,7 @@ const tags = [
   ),
 ];
 
-const maxPriceData = { amount: "0", currencyCode: "USD" };
+const maxPriceData = await getLocalHighestProductPrice();
 
 const initialProducts = productsData.products;
 const initialPageInfo = productsData.pageInfo;
@@ -133,10 +143,8 @@ const initialPageInfo = productsData.pageInfo;
 <Base title="Products">
   <ProductLayouts
     categories={categories}
-    vendors={vendors}
     tags={tags}
     maxPriceData={maxPriceData}
-    vendorsWithCounts={vendorsWithCounts}
     categoriesWithCounts={categoriesWithCounts}
     client:only="react"
   />
@@ -146,10 +154,8 @@ const initialPageInfo = productsData.pageInfo;
       <div class="col-3 hidden lg:block -mt-14">
         <ProductFilters
           categories={categories}
-          vendors={vendors}
           tags={tags}
-          maxPriceData={maxPriceData!}
-          vendorsWithCounts={vendorsWithCounts}
+          maxPriceData={maxPriceData}
           categoriesWithCounts={categoriesWithCounts}
           client:only="react"
         />

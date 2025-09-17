@@ -41,8 +41,34 @@ export async function getLocalProducts({
   let list = (products as unknown as any[]).slice();
 
   if (query) {
-    const q = query.toLowerCase();
-    list = list.filter((p) => p.title.toLowerCase().includes(q) || p.description.toLowerCase().includes(q));
+    // Parse the query string to extract different filter types
+    const queryParts = query.split(' ').filter(part => part.trim());
+    
+    for (const part of queryParts) {
+      if (part.includes('variants.price:<=')) {
+        // Handle max price filter
+        const maxPrice = parseFloat(part.split('<=')[1]);
+        list = list.filter((p) => {
+          const productMinPrice = parseFloat(p.priceRange.minVariantPrice.amount);
+          return productMinPrice <= maxPrice;
+        });
+      } else if (part.includes('variants.price:>=')) {
+        // Handle min price filter
+        const minPrice = parseFloat(part.split('>=')[1]);
+        list = list.filter((p) => {
+          const productMaxPrice = parseFloat(p.priceRange.maxVariantPrice.amount);
+          return productMaxPrice >= minPrice;
+        });
+      } else {
+        // Handle text search
+        const searchTerm = part.toLowerCase();
+        list = list.filter((p) => 
+          p.title.toLowerCase().includes(searchTerm) || 
+          p.description.toLowerCase().includes(searchTerm) ||
+          p.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm))
+        );
+      }
+    }
   }
 
   if (sortKey === "PRICE") {
@@ -79,6 +105,28 @@ export async function getLocalVendors(): Promise<{ vendor: string; productCount:
 export async function getLocalTags(): Promise<string[]> {
   const list = products as unknown as any[];
   return Array.from(new Set(list.flatMap((p) => p.tags)));
+}
+
+export async function getLocalHighestProductPrice(): Promise<{
+  amount: string;
+  currencyCode: string;
+}> {
+  const list = products as unknown as any[];
+  let maxPrice = 0;
+  let currencyCode = "USD";
+  
+  list.forEach((product) => {
+    const productMaxPrice = parseFloat(product.priceRange.maxVariantPrice.amount);
+    if (productMaxPrice > maxPrice) {
+      maxPrice = productMaxPrice;
+      currencyCode = product.priceRange.maxVariantPrice.currencyCode;
+    }
+  });
+  
+  return {
+    amount: maxPrice.toString(),
+    currencyCode: currencyCode
+  };
 }
 
 
