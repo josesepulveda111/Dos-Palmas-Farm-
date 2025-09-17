@@ -16,6 +16,7 @@ const CartModal: React.FC = () => {
   const quantity = useStore(totalQuantity);
   const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const [checkoutLoading, setCheckoutLoading] = useState(false);
 
   // Refresh the cart when the component mounts
   useEffect(() => {
@@ -208,12 +209,23 @@ const CartModal: React.FC = () => {
               </div>
             </div>
 
-            <a
-              href="/checkout"
-              className="block w-full rounded-md bg-dark dark:bg-light p-3 text-center text-sm font-medium text-white dark:text-text-dark opacity-100 hover:opacity-90"
+            <button
+              onClick={async () => {
+                setCheckoutLoading(true);
+                try {
+                  // Asegurar que el estado del carrito esté sincronizado antes de redirigir
+                  await refreshCartState();
+                  window.location.href = '/checkout';
+                } catch (error) {
+                  console.error('Error al sincronizar carrito:', error);
+                  setCheckoutLoading(false);
+                }
+              }}
+              disabled={checkoutLoading}
+              className="block w-full rounded-md bg-dark dark:bg-light p-3 text-center text-sm font-medium text-white dark:text-text-dark opacity-100 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Finalizar compra
-            </a>
+              {checkoutLoading ? 'Procesando...' : 'Finalizar compra'}
+            </button>
           </div>
         </div>
       </div>

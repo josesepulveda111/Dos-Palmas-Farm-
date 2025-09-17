@@ -224,8 +224,28 @@ import Notification from "@/layouts/functional-components/Notification";
   // Cargar el carrito al inicializar la página
   async function initializeCheckout() {
     try {
+      // Forzar la actualización del estado del carrito
       await refreshCartState();
-      const currentCart = cart.get();
+      
+      // Obtener el carrito directamente desde localStorage como respaldo
+      const cartId = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('cartId='))
+        ?.split('=')[1];
+      
+      let currentCart: any = cart.get();
+      
+      // Si el store no tiene el carrito, intentar cargarlo directamente
+      if (!currentCart && cartId) {
+        const { getCart } = await import('@/lib/local/cart');
+        const loadedCart = await getCart(cartId);
+        if (loadedCart) {
+          currentCart = loadedCart;
+          cart.set(loadedCart);
+        }
+      }
+      
+      // Renderizar el resumen
       renderCartSummary(currentCart);
       
       // Si el carrito está vacío, redirigir a productos
@@ -235,6 +255,11 @@ import Notification from "@/layouts/functional-components/Notification";
       }
     } catch (error) {
       console.error('Error al cargar el carrito:', error);
+      // Mostrar mensaje de error y redirigir
+      document.getElementById('cartSummary')!.innerHTML = '<p class="text-red-500">Error al cargar el carrito. Redirigiendo...</p>';
+      setTimeout(() => {
+        window.location.href = '/products';
+      }, 2000);
     }
   }
   
