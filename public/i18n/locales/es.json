@@ -1,0 +1,145 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "clear": "Limpiar",
+    "apply": "Aplicar",
+    "reset": "Restablecer"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "products": "Productos",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "cart": "Carrito",
+    "checkout": "Finalizar Compra",
+    "account": "Cuenta",
+    "login": "Iniciar Sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesión"
+  },
+  "header": {
+    "title": "Dos Palmas Farm",
+    "tagline": "Flores frescas para cada ocasión",
+    "search_placeholder": "Buscar productos...",
+    "cart_items": "artículos en el carrito",
+    "language": "Idioma"
+  },
+  "home": {
+    "hero": {
+      "title": "Bienvenido a Dos Palmas Farm",
+      "subtitle": "Descubre nuestra hermosa colección de flores frescas",
+      "cta": "Comprar Ahora"
+    },
+    "featured_products": "Productos Destacados",
+    "about_us": "Acerca de Nosotros",
+    "contact_us": "Contáctanos"
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "filter_by": "Filtrar por",
+    "price_range": "Rango de Precio",
+    "categories": "Categorías de Productos",
+    "tags": "Etiquetas",
+    "sort_by": "Ordenar por",
+    "results": "resultados",
+    "result": "resultado",
+    "showing_results": "Mostrando {count} {results} para",
+    "no_products_found": "¡No se encontraron productos!",
+    "no_products_message": "No pudimos encontrar lo que buscabas. Intenta filtrar de nuevo.",
+    "add_to_cart": "Agregar al Carrito",
+    "select_variant": "Seleccionar Variante",
+    "out_of_stock": "Agotado",
+    "scroll_for_more": "Desplázate para más",
+    "price": "Precio",
+    "quantity": "Cantidad"
+  },
+  "cart": {
+    "title": "Carrito de Compras",
+    "empty": "Tu carrito está vacío",
+    "empty_message": "Agrega algunos productos para comenzar",
+    "continue_shopping": "Continuar Comprando",
+    "update_cart": "Actualizar Carrito",
+    "checkout": "Finalizar Compra",
+    "finalize_purchase": "Finalizar Compra",
+    "processing": "Procesando...",
+    "subtotal": "Subtotal",
+    "taxes": "Impuestos",
+    "total": "Total",
+    "remove_item": "Eliminar artículo",
+    "item_added": "Artículo agregado al carrito",
+    "item_removed": "Artículo eliminado del carrito",
+    "cart_updated": "Carrito actualizado"
+  },
+  "checkout": {
+    "title": "Finalizar Compra",
+    "customer_info": "Información del Cliente",
+    "order_summary": "Resumen del Pedido",
+    "full_name": "Nombre Completo",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "delivery_address": "Dirección de Entrega",
+    "send_order": "Enviar Pedido",
+    "sending": "Enviando...",
+    "order_sent": "¡Pedido enviado correctamente! Te hemos enviado un email de confirmación.",
+    "order_error": "Error al enviar el pedido",
+    "empty_cart_redirect": "Carrito vacío. Redirigiendo a productos...",
+    "cart_error": "Error al cargar el carrito. Redirigiendo...",
+    "whats_next": "¿Qué sigue?",
+    "check_email": "Revisa tu email para la confirmación del pedido",
+    "contact_soon": "Nos pondremos en contacto contigo pronto para coordinar la entrega",
+    "any_questions": "Si tienes alguna pregunta, no dudes en contactarnos",
+    "continue_shopping": "Seguir Comprando",
+    "back_to_home": "Volver al Inicio"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "¡Nos encantaría saber de ti!",
+    "first_name": "Nombre",
+    "last_name": "Apellido",
+    "email": "Correo Electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send_message": "Enviar Mensaje",
+    "message_sent": "¡Mensaje enviado!",
+    "message_sent_description": "Gracias por contactarnos. Nos pondremos en contacto contigo pronto.",
+    "back_to_home": "Volver al Inicio",
+    "required_field": "Campo obligatorio",
+    "invalid_email": "Por favor ingresa un correo electrónico válido"
+  },
+  "about": {
+    "title": "Acerca de Nosotros",
+    "subtitle": "Conoce más sobre Dos Palmas Farm"
+  },
+  "footer": {
+    "copyright": "Diseñado y Desarrollado por",
+    "all_rights_reserved": "Todos los derechos reservados"
+  },
+  "notifications": {
+    "success": "Éxito",
+    "error": "Error",
+    "warning": "Advertencia",
+    "info": "Información"
+  },
+  "forms": {
+    "required": "Obligatorio",
+    "optional": "Opcional",
+    "invalid_format": "Formato inválido",
+    "field_required": "Este campo es obligatorio",
+    "email_required": "El correo electrónico es obligatorio",
+    "name_required": "El nombre es obligatorio"
+  }
+}

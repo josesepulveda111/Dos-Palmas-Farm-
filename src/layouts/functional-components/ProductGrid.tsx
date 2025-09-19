@@ -176,27 +176,29 @@ const ProductGrid = ({
                     {product?.title}
                   </a>
                 </h2>
-                <div className="flex flex-wrap justify-center items-center gap-x-2 mt-2 md:mt-4">
-                  <span className="text-base md:text-xl font-bold text-text-dark dark:text-darkmode-text-dark">
-                    {currencySymbol}{" "}
-                    {product?.priceRange?.minVariantPrice?.amount}{" "}
-                    {product?.priceRange?.minVariantPrice?.currencyCode}
-                  </span>
-                  {parseFloat(
-                    product?.compareAtPriceRange?.maxVariantPrice?.amount,
-                  ) > 0 ? (
-                    <s className="text-text-light dark:text-darkmode-text-light text-xs md:text-base font-medium">
+                {config.settings?.show_prices !== false ? (
+                  <div className="flex flex-wrap justify-center items-center gap-x-2 mt-2 md:mt-4">
+                    <span className="text-base md:text-xl font-bold text-text-dark dark:text-darkmode-text-dark">
                       {currencySymbol}{" "}
-                      {product?.compareAtPriceRange?.maxVariantPrice?.amount}{" "}
-                      {
-                        product?.compareAtPriceRange?.maxVariantPrice
-                          ?.currencyCode
-                      }
-                    </s>
-                  ) : (
-                    ""
-                  )}
-                </div>
+                      {product?.priceRange?.minVariantPrice?.amount}{" "}
+                      {product?.priceRange?.minVariantPrice?.currencyCode}
+                    </span>
+                    {parseFloat(
+                      product?.compareAtPriceRange?.maxVariantPrice?.amount,
+                    ) > 0 ? (
+                      <s className="text-text-light dark:text-darkmode-text-light text-xs md:text-base font-medium">
+                        {currencySymbol}{" "}
+                        {product?.compareAtPriceRange?.maxVariantPrice?.amount}{" "}
+                        {
+                          product?.compareAtPriceRange?.maxVariantPrice
+                            ?.currencyCode
+                        }
+                      </s>
+                    ) : (
+                      ""
+                    )}
+                  </div>
+                ) : null}
               </div>
             </div>
           )

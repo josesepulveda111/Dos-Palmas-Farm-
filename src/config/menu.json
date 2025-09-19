@@ -8,14 +8,14 @@
       "name": "Products",
       "url": "/products"
     },
-        {
-          "name": "About",
-          "url": "/about"
-        },
-        {
-          "name": "Contact",
-          "url": "/contact"
-        }
+    {
+      "name": "About",
+      "url": "/about"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
   ],
   "footer": [
     {

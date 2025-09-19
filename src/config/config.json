@@ -4,7 +4,7 @@
     "base_url": "https://dospalmasfarm.com/",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/logo_transparente.png",
     "logo": "/images/logo_transparente.png",
     "logo_darkmode": "/images/logo_transparente.png",
     "logo_width": "80",
@@ -17,7 +17,8 @@
     "account": true,
     "sticky_header": true,
     "theme_switcher": true,
-    "default_theme": "system"
+    "default_theme": "system",
+    "show_prices": false
   },
 
   "params": {

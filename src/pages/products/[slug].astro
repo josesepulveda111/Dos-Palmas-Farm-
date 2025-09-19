@@ -58,6 +58,7 @@ const { currencySymbol } = config.shopify;
         <div class="col-10 md:col-8 lg:col-5 md:ml-7 py-6 lg:py-0">
           <h1 class="text-3xl md:h2 mb-2 md:mb-6">{title}</h1>
 
+          {config.settings?.show_prices !== false ? (
           <div class="flex gap-2 items-center">
             <h4 class="text-text-light dark:text-darkmode-text-light max-md:h2">
               {currencySymbol}
@@ -76,6 +77,7 @@ const { currencySymbol } = config.shopify;
               )
             }
           </div>
+          ) : null}
 
           <div class="my-10 md:my-10 space-y-6 md:space-y-10">
             <div>

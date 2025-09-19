@@ -172,24 +172,26 @@ const ProductList = ({
                     <a href={`/products/${handle}`}>{title}</a>
                   </h2>
 
-                  <div className="flex items-center gap-x-2 mt-2">
-                    <span className="text-text-light dark:text-darkmode-text-light text-xs md:text-lg font-bold">
-                      {currencySymbol}{" "}
-                      {priceRange?.minVariantPrice?.amount}{" "}
-                      {priceRange?.minVariantPrice?.currencyCode}
-                    </span>
-                    {parseFloat(
-                      compareAtPriceRange?.maxVariantPrice?.amount,
-                    ) > 0 ? (
-                      <s className="text-text-light dark:text-darkmode-text-light text-xs md:text-base font-medium">
+                  {config.settings?.show_prices !== false ? (
+                    <div className="flex items-center gap-x-2 mt-2">
+                      <span className="text-text-light dark:text-darkmode-text-light text-xs md:text-lg font-bold">
                         {currencySymbol}{" "}
-                        {compareAtPriceRange?.maxVariantPrice?.amount}{" "}
-                        {compareAtPriceRange?.maxVariantPrice?.currencyCode}
-                      </s>
-                    ) : (
-                      ""
-                    )}
-                  </div>
+                        {priceRange?.minVariantPrice?.amount}{" "}
+                        {priceRange?.minVariantPrice?.currencyCode}
+                      </span>
+                      {parseFloat(
+                        compareAtPriceRange?.maxVariantPrice?.amount,
+                      ) > 0 ? (
+                        <s className="text-text-light dark:text-darkmode-text-light text-xs md:text-base font-medium">
+                          {currencySymbol}{" "}
+                          {compareAtPriceRange?.maxVariantPrice?.amount}{" "}
+                          {compareAtPriceRange?.maxVariantPrice?.currencyCode}
+                        </s>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  ) : null}
 
                   <p className="max-md:text-xs text-text-light dark:text-darkmode-text-light my-4 md:mb-8 line-clamp-1 md:line-clamp-3">
                     {description}

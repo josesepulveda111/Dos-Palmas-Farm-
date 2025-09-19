@@ -1,0 +1,145 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "clear": "Clear",
+    "apply": "Apply",
+    "reset": "Reset"
+  },
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "account": "Account",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "header": {
+    "title": "Dos Palmas Farm",
+    "tagline": "Fresh flowers for every occasion",
+    "search_placeholder": "Search products...",
+    "cart_items": "items in cart",
+    "language": "Language"
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome to Dos Palmas Farm",
+      "subtitle": "Discover our beautiful collection of fresh flowers",
+      "cta": "Shop Now"
+    },
+    "featured_products": "Featured Products",
+    "about_us": "About Us",
+    "contact_us": "Contact Us"
+  },
+  "products": {
+    "title": "Our Products",
+    "filter_by": "Filter by",
+    "price_range": "Price Range",
+    "categories": "Product Categories",
+    "tags": "Tags",
+    "sort_by": "Sort by",
+    "results": "results",
+    "result": "result",
+    "showing_results": "Showing {count} {results} for",
+    "no_products_found": "No Product Found!",
+    "no_products_message": "We couldn't find what you filtered for. Try filtering again.",
+    "add_to_cart": "Add to Cart",
+    "select_variant": "Select Variant",
+    "out_of_stock": "Out of Stock",
+    "scroll_for_more": "Scroll for more",
+    "price": "Price",
+    "quantity": "Quantity"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "empty_message": "Add some products to get started",
+    "continue_shopping": "Continue Shopping",
+    "update_cart": "Update Cart",
+    "checkout": "Checkout",
+    "finalize_purchase": "Finalize Purchase",
+    "processing": "Processing...",
+    "subtotal": "Subtotal",
+    "taxes": "Taxes",
+    "total": "Total",
+    "remove_item": "Remove item",
+    "item_added": "Item added to cart",
+    "item_removed": "Item removed from cart",
+    "cart_updated": "Cart updated"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "customer_info": "Customer Information",
+    "order_summary": "Order Summary",
+    "full_name": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "delivery_address": "Delivery Address",
+    "send_order": "Send Order",
+    "sending": "Sending...",
+    "order_sent": "Order sent successfully! We've sent you a confirmation email.",
+    "order_error": "Error sending order",
+    "empty_cart_redirect": "Empty cart. Redirecting to products...",
+    "cart_error": "Error loading cart. Redirecting...",
+    "whats_next": "What's next?",
+    "check_email": "Check your email for order confirmation",
+    "contact_soon": "We'll contact you soon to coordinate delivery",
+    "any_questions": "If you have any questions, don't hesitate to contact us",
+    "continue_shopping": "Continue Shopping",
+    "back_to_home": "Back to Home"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We would love to hear from you!",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email Address",
+    "subject": "Subject",
+    "message": "Message",
+    "send_message": "Send Message",
+    "message_sent": "Message sent!",
+    "message_sent_description": "Thank you for contacting us. We'll get back to you soon.",
+    "back_to_home": "Back to Home",
+    "required_field": "Required field",
+    "invalid_email": "Please enter a valid email address"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Learn more about Dos Palmas Farm"
+  },
+  "footer": {
+    "copyright": "Designed And Developed by",
+    "all_rights_reserved": "All rights reserved"
+  },
+  "notifications": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Information"
+  },
+  "forms": {
+    "required": "Required",
+    "optional": "Optional",
+    "invalid_format": "Invalid format",
+    "field_required": "This field is required",
+    "email_required": "Email is required",
+    "name_required": "Name is required"
+  }
+}
